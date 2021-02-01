@@ -5,8 +5,21 @@
     <title>360 Photos Preview Page</title>
   </head>
   <body>
-    <iframe src='chihuly_macchia.html' style='border:0'></iframe>
-
-    </div>
+    <style>
+      .embed-container { 
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+      } 
+      .embed-container iframe, .embed-container object, .embed-container embed { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; 
+      }
+    </style>
+    <div class='embed-container'><iframe src='https://mizmay.github.io/WebVR-Test/chihuly_macchia.html' style='border:0'></iframe></div>
   </body>
 </html>
