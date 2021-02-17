@@ -1,0 +1,3 @@
+tour/index.html <-- Ideally AAG will host this
+tour/julianstour.html <-- Ideally AAG will host this - just contains aframe (aframe contains VR tour hosted at UBC)
+tour/elliestour.html <-- Ideally AAG will host this - just aframe (contents hosted on UBC server)
