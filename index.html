@@ -33,9 +33,11 @@ $container-max-widths: (
       <p>This is a volunteer effort to replicate some of the in-person elements of the 2021 AAG Annual Meeting. Specifically we are trying to emulate field trips that allow us to get more familiar with the place where the meeting is held.</p>
       <p>These tours were made as proof of concepts, using an existing in-person tour and an active research project to present places in Seattle with current and historic significance. Besides getting to see some of Seattle, these tours present a novel way to encounter place-based content using accessible virtual reality, 360 images, and web tools.</p>
       <h2>Where</h2>
-      <p>Land acknoweldgement placeholderx</p>
-      </div>
-      <div id="mapdiv" style="height:350px; width: 350px;"></div>
+      <p>We wish to acknowledge the [Land acknoweldgement placeholderx] people</p>
+      <p><b>Instructions</b>: Click on a map marker to go to that particular tour (below). For best experience, make your browser window Full Screen before entering a VR tour. Additional information has been provided by tour guides on each page and below.
+      <div id="mapdiv" style="height:350px; width: 550px; margin-left:25px; position: relative" class="card"></div>
+    </div>
+    <p>&nbsp;</p>
 
   <script>
   var map = L.map('mapdiv').setView([47.617, -122.319], 13);
@@ -45,35 +47,38 @@ $container-max-widths: (
   }).addTo(map);
 
   L.marker([47.629, -122.313]).addTo(map)
-    .bindPopup('<b>Capitol Hill</b>');
+    .bindPopup('<b><a href="#tour2"><div data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Tour 2: Capitol Hill</div></a></b>');
     //.openPopup();
 
   L.marker([47.601, -122.333]).addTo(map)
-      .bindPopup('<b>Pioneer Square</b>');
+      .bindPopup('<b><a href="#tour1"><div data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Tour 1: Pioneer Square</div></a></b>');
       //.openPopup();
   </script>
 <div class="container">
-      <p>instructions - follow link, make full screen. Additional information has been provided by tour guides on each page and below.
-      <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        <h3>Tour 1: Pioneer Square (Guide: Julian)</h3>
-      </button>
-    </h2>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item"><a name="tour1">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <h3>Tour 1: Pioneer Square (Guide: Julian)</h3>
+        </button>
+      </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <h4>Introduction<h4>
+        <h4>Introduction</h4>
+          <p>This tour for Pioneer Square focuses on queer spaces. Four general areas are highlighted in this tour:
+The corner of S. Washington and  S. Jackson, 2nd Ave and James Street, 1st Ave and Yesler Way, and Occidental Park. </p>
+<p>Along the tour, queer spaces, locations, and historic events are highlighted.  
         <a href="queer-pioneer-square.html">Click here for the full tour</a>
+        <p></p>
         <h4>Credits</h4>
-        <p>the people involved</p>
+        <p>Tour guide: Julian Barr. Photos by: Stephanie May</p>
       </div>
     </div>
   </div>
-  <div class="accordion-item">
+  <div class="accordion-item"><a name="tour2">
     <h2 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <h3>Tour 2: Black Lives Matter Protest in Seattle, 2020</h3>
+        <h3>Tour 2: Capitol Hill: Black Lives Matter Protest in Seattle, 2020</h3>
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -82,10 +87,13 @@ $container-max-widths: (
         <p>In the summer of 2020, there was a resurgence of the Black Lives Matter movement in response to multiple accounts of police brutality against Black folks in the USA, and the overt structural inequalities along racial lines, exposed by the COVID-19 pandemic. In Seattle, protesters took to the streets and were met with police using tear gas, flashbangs and pepper spray to disperse the crowds (<a href="https://www.seattlepi.com/seattlenews/article/What-is-CHOP-the-zone-in-Seattle-formed-by-15341281.php">Savransky, 2020</a>). Protesters marched from Downtown, east towards Capitol Hill on June 1st (<a href="https://www.washingtonpost.com/national/activists-take-over-a-seattle-neighborhood-banishing-the-police/2020/06/11/7172e1e6-ac24-11ea-a9d9-a81c1a491c52_story.html">Scruggs, 2020</a>). They found their way blocked by barricades around Seattle Police Department’s (SPD) East Precinct. The crowd became so large that the police declared a riot, and a tense seven-day standoff ensued with protesters who returned daily (ibid). On June 8th, in an attempt to de-escalate the violence, the police vacated the East Precinct. Protesters repurposed the barriers, which previously protected the East Precinct, to form the borders of an autonomous, police-free zone, pedestrianizing a six-block area and ensuring the police could not easily return.</p>
         <p>This tour leads viewers through some of the key landmarks in the protest, and documentation of scenes during the event. [Instructions for navigating the tour, below this window]</p></p>
         <a href="capitol-hill.html">Click here for the full tour</a>
+        <p></p>
         <h4>Credits</h4>
+        <p>people here</p>
       </div>
     </div>
   </div>
+  <!--
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
@@ -98,12 +106,16 @@ $container-max-widths: (
       </div>
     </div>
   </div>
+  //-->
 </div>
+<p>&nbsp;</p>
 
+      <h2>AAG Presentation</h2>
+      Come meet the crew and learn more about how this project came together at AAG 2021! The panel "<a href="https://aag.secure-abstracts.com/AAG%20Annual%20Meeting%202021/sessions-gallery/27632" target="_blank">Virtual Field Trips</a>" will be held from <b>11:10a-12:25p</b> (Pacific) on <b>April 8</b> (Thursday) in Virtual Room 49
 
-      <h2>How</h2>
+      <p>&nbsp;</p>
         <h2>Who</h2>
-        <p>This is the team of people who did stuff for this project: Julian Barr, Ellie Cleasby, Nina Hewitt, Karen Kemp, Stephanie May, Anna Patterson, Rebecca Shakespeare, Dipto Sarkar.
+        <p>This is the team of people who did stuff for this project: Julian Barr, Ellie Cleasby, Nina Hewitt, Karen Kemp,Anna Klimaszewski-Patterson,  Stephanie May, Rebecca Shakespeare, Dipto Sarkar.
     </div>
     <div style="width: 400px;">
 
